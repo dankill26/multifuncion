@@ -14,15 +14,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-int calculodni (int);//prototipo de función
-char indiceletra (int);
-char romanos(int);
-int verificar (char);
+int calculodni (int*a);//prototipo de función
+char indiceletra (int*b);
+char romanos(int*n);
+int verificar (char *c);
 int main() {
-    char numerodni[9];
+    char numerodni[20];
     int eleccion;
     int resultado;
-    char numeroRomano[4];
+    int numeroRomano;
     char resultadoRomano;
     int control =1;
      
@@ -39,28 +39,30 @@ int main() {
     
     if (eleccion==1) {
         printf ("Escriba su numero DNI: \n");
-        scanf ("%s",numerodni);
-        verificar(numerodni);
+        scanf ("%i",&numerodni);
+        verificar(&numerodni);
         
-        printf("el numero de dni es %s \n",numerodni);
-        resultado=calculodni(*numerodni);
+        printf("el numero de dni es %i \n",numerodni);
+        resultado=calculodni(&numerodni);
         
-        printf("Su letra de dni es %c \t\n",indiceletra(resultado));
+        printf("Su letra de dni es %c \t\n",indiceletra(&resultado));
     }
     
     else if (eleccion==2) {
         printf("escriba un valor entre 1 y 3000 \n");
-        scanf ("%s",&numeroRomano);
-            verificar(numeroRomano);
-            printf("numero valido\n %i \t \n",);
+        scanf ("%i",&numeroRomano);
+            //verificar(&numeroRomano);
             
-            if (numeroRomano <= 3000){
-                 resultadoRomano=romanos(numeroRomano);
-            }
+            printf("numero valido\n %i \t \n",&numeroRomano);
+            
+           // if ((numeroRomano >0)&&(numeroRomano <= 3000)){
+                 resultadoRomano=romanos(&numeroRomano);
+                 printf("Su numero romano es: \t %c \n",resultadoRomano );
+           /* }
            
             else{
                 printf("dato erroneo \n");
-            }
+            }*/
     }
             
     

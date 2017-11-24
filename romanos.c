@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-char romanos(int numerodecimal) {
+void romanos(int *n) {
 
     
     int mil,centena,decena,unidad;
@@ -49,13 +49,13 @@ char romanos(int numerodecimal) {
     
          //scanf ("%i", &numerodecimal);
         //desfactorizando el numero introducido por el usuario
-    mil=(numerodecimal/1000);
+    mil=(*n/1000);
     printf("resultado para milares : %i %s \t \n \t",mil,mile[mil]);    
-    centena=((numerodecimal-mil*1000)/100);
+    centena=((*n-mil*1000)/100);
     printf("resultado para centenas : %i %s \t \n\t",centena,cent[centena]);
-    decena=(((numerodecimal -(mil*1000+centena*100)))/10);        
+    decena=(((*n -(mil*1000+centena*100)))/10);        
     printf("resultado para decenas : %i %s \t \n\t",decena,dec[decena]);
-    unidad=(numerodecimal-(mil*1000+centena*100+decena*10));    
+    unidad=(*n-(mil*1000+centena*100+decena*10));    
     printf("resultado para unidades : %i %s\t \n\t",unidad,uni[unidad]);
     printf("su numero romano es %s%s%s%s \n",mile[mil],cent[centena],dec[decena],uni[unidad]);
                 
