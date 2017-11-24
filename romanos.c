@@ -1,10 +1,10 @@
 
 #include <stdio.h>
-void romanos(int *n) {
+char romanos(int *n) {
 
     
     int mil,centena,decena,unidad;
-       
+    char resultado;  
     
     //declaracion de cadenas de caracteres
     char miles1[2]="",miles2[2]="M",miles3[3]="MM",miles4[4]="MMM";    
@@ -59,7 +59,9 @@ void romanos(int *n) {
     printf("resultado para unidades : %i %s\t \n\t",unidad,uni[unidad]);
     printf("su numero romano es %s%s%s%s \n",mile[mil],cent[centena],dec[decena],uni[unidad]);
                 
-return mile[mil],cent[centena],dec[decena],uni[unidad];
+    resultado= mile[mil],cent[centena],dec[decena],uni[unidad];
+    printf("resultado es %c\t",resultado);
+            return(resultado);
 
 
 

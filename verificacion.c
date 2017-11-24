@@ -1,12 +1,12 @@
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <ctype.h>
+//#include <string.h>
 /*
  * 
  */
-int verificar(int *c) {
+int verificar(char *c) {
    
 //recorrer array y verificar que es numero.
 //char numerr[20]= *c;

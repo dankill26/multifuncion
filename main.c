@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 int calculodni (int*a);//prototipo de función
 char indiceletra (int*b);
 char romanos(int*n);
